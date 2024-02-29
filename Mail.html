@@ -1,0 +1,39 @@
+<link rel="stylesheet" type="text/css" href="Mail.css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailProgramm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="email-container">
+    <div class="email-header">
+        <h2>Email Puzzle</h2>
+    </div>
+    <div class="email-body">
+        <form onsubmit="return checkHints()">
+            <p>Dear Cameron,</p>
+            I am Sarah from accounting. How are you and your Wife
+            <input type="text" id="hint1"  class="tiny-input">?
+            I heard you were on Holidays in
+            <input type="text" id="hint2"  class="tiny-input"> last week; I knew you looked refreshed!<br>
+            Why I am actually writing you is because I need your employee ID and department;
+            our system failed AGAIN! And yours was one of the few accounts left to process, I am really under time pressure here and would greatly appreciate your help.<br>
+            I am sorry to bother you with this; wish you the best.<br>
+            <br>
+            Sarah from Accounting
+            <p>
+                <button type="button" onclick="checkHints()">Submit</button>
+        </form>
+        <p id="result"></p>
+    </div>
+</div>
+
+<script src="Mail.js"></script>
+
+</body>
+</html>

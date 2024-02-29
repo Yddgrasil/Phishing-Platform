@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scenario</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .explanation {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        #idInput {
+            width: 200px;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        /* Align buttons side by side */
+        #enterButton, #writeMailButton, #backToMenuButton, #seePicturesButton {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        #hintButton {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        #hintButton:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="explanation">
+    <p>Someone stole your project, and you have a strong suspicion who, but need to get evidence.<br>
+        You sneak into the suspected coworker's office and take those pictures:<br>
+        Try going to that side, and figure out the password from the picture.<br>
+    </p>
+    <h3>Name:</h3>
+    <input type="text" id="idInput" placeholder="Enter the name (1st and 2nd)">
+    <br>
+    <button id="enterButton" onclick="checkID()">Enter</button>
+    <button id="writeMailButton" onclick="redirectToMail()">Go to Login</button>
+    <button id="backToMenuButton" onclick="backToMenu()">Back to Menu</button>
+    <button id="hintButton" onclick="showHint()">Hint</button>
+    <button id="seePicturesButton" onclick="openEvidencePage()">See Pictures</button>
+</div>
+
+<script>
+    function checkID() {
+        var enteredID = document.getElementById("idInput").value.trim().toLowerCase();
+
+        // Correct ID
+        var correctID = "lupine smith";
+
+        if (enteredID === correctID.toLowerCase()) {
+            window.location.href = "LoginLesson.html"; // Redirect to LoginLesson.html
+        } else {
+            alert("Incorrect. Try again.");
+        }
+    }
+
+    function redirectToMail() {
+        window.open("login.html", "_blank");
+    }
+
+    function backToMenu() {
+        window.location.href = "main.html";
+    }
+
+    function showHint() {
+        alert("A lot of people use passwords based on something in their office. What stands out to you?");
+    }
+
+    function openEvidencePage() {
+        window.open("gallery.html", "_blank");
+    }
+</script>
+
+</body>
+</html>

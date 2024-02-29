@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fail Mail 1</title>
+  <link rel="stylesheet" href="Mail.css">
+
+</head>
+<body>
+
+<div class="email-container">
+  <div class="email-header">
+    <h2>Fail Mail 1</h2>
+  </div>
+  <div class="email-body">
+    <p>Hey Sarah,  <br>
+      I wasn't on holiday for YEARS :(! <br>
+      You seem to have the wrong person, sorry. <br>
+      Best Regards, <br>
+      Cameron
+    </p>
+    <button onclick="retry()">Retry</button>
+    <button onclick="backToMenu()">Back to Menu</button>
+  </div>
+</div>
+
+<script>
+  function retry() {
+    // Add retry logic here
+    window.location.href = "MailExc.html"; // Replace with the actual location of your menu page
+  }
+
+  function backToMenu() {
+    // Add back to menu logic here
+    window.location.href = "main.html"; // Replace with the actual location of your menu page
+  }
+</script>
+
+</body>
+</html>

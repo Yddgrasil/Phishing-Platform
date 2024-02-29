@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scenario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .explanation {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        #idInput {
+            width: 200px;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        /* Align buttons side by side */
+        #enterButton, #backToMenuButton, #writeMailButton {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="explanation">
+    <p>You want Cameron Faschint-Grablerl's employee ID and department to be able to impersonate him.<br>
+        Try getting as much information before writing him to gain his trust.<br>
+        What is Cameron's ID?
+    </p>
+    <h3>ID:</h3>
+    <input type="text" id="idInput" placeholder="Enter Cameron's ID">
+    <br>
+    <button id="enterButton" onclick="checkID()">Enter</button>
+    <button id="writeMailButton" onclick="redirectToMail()">Write Mail</button>
+    <button id="backToMenuButton" onclick="backToMenu()">Back to Menu</button>
+</div>
+
+<script>
+    function checkID() {
+        var enteredID = document.getElementById("idInput").value.trim().toLowerCase();
+
+        // Correct ID
+        var correctID = "012667823";
+
+        if (enteredID === correctID.toLowerCase()) {
+            alert("Correct ID!");
+            window.location.href = "MailLesson.html"; // Redirect to MailLesson.html
+        } else {
+            // No pop-up for incorrect entries
+        }
+    }
+
+    function redirectToMail() {
+        window.open("Mail.html", "_blank");
+    }
+
+    function backToMenu() {
+        window.location.href = "main.html";
+    }
+</script>
+
+</body>
+</html>

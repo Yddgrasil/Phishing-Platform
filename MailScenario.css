@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.explanation {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#idInput {
+    width: 200px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#enterButton, #backToMenuButton {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+h1 {
+    color: #3498db;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
